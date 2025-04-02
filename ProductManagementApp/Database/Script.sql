@@ -1,0 +1,1 @@
+insert into Products(Name,Price) values ('Milk' ,'80.99' )

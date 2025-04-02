@@ -1,28 +1,26 @@
-﻿@model IEnumerable<ProductManagementApp.Models.Product>
+﻿@model IEnumerable<Product>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Product List</title>
-</head>
-<body>
-    <h1>Product List</h1>
-    <table border="1">
+<h2>Products</h2>
+<table class="table">
+    <thead>
         <tr>
             <th>Id</th>
             <th>Name</th>
             <th>Price</th>
-            <th>Details</th>
+            <th>Actions</th>
         </tr>
+    </thead>
+    <tbody>
         @foreach (var product in Model)
         {
             <tr>
                 <td>@product.Id</td>
                 <td>@product.Name</td>
                 <td>@product.Price</td>
-                <td><a href="@Url.Action("Details", "Product", new { id = product.Id })">Details</a></td>
+                <td>
+                    <a href="@Url.Action("Details", new { id = product.Id })">Details</a>
+                </td>
             </tr>
         }
-    </table>
-</body>
-</html>
+    </tbody>
+</table>

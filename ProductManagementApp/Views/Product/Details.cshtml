@@ -1,21 +1,6 @@
-﻿@model ProductManagementApp.Models.Product
+﻿@model Product
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Product Details</title>
-</head>
-<body>
-    <h1>Product Details</h1>
-    <div>
-        <strong>Id:</strong> @Model.Id
-    </div>
-    <div>
-        <strong>Name:</strong> @Model.Name
-    </div>
-    <div>
-        <strong>Price:</strong> @Model.Price
-    </div>
-    <a href="@Url.Action("Index", "Product")">Back to List</a>
-</body>
-</html>
+<h2>Product Details</h2>
+<p><strong>Name:</strong> @Model.Name</p>
+<p><strong>Price:</strong> @Model.Price</p>
+<a href="@Url.Action("Index")">Back to list</a>
